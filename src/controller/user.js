@@ -58,7 +58,7 @@ const forgetPassword=async(req,res)=>{
                const expirationTimestamp = Date.now() + 2 * 60 * 1000; // 2 minutes in milliseconds
 
                // Store the random string and its expiration time in the user's record or in the URL
-               const resetLink = `${process.env.Reset_Url}/reset-password/${randomString}/${expirationTimestamp}`;
+               const resetLink = `${process.env.ResetUrl}/reset-password/${randomString}/${expirationTimestamp}`;
              
                //send email using nodemailer
                const transporter= nodemailer.createTransport({
