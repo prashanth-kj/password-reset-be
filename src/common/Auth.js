@@ -10,7 +10,6 @@ const hashCompare =async(password,hash)=>{
       return await bcrypt.compare(password,hash)
 }
 
-
 export default {
       hashPassword,
       hashCompare
